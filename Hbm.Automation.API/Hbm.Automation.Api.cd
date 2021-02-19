@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Hbm.Automation.Api.Weighing.BaseWTDevice">
+    <Position X="4.5" Y="2" Width="5.25" />
+    <Members>
+      <Field Name="_processDataInterval" Hidden="true" />
+      <Method Name="AdjustNominalSignal" Hidden="true" />
+      <Method Name="AdjustNominalSignalWithCalibrationWeight" Hidden="true" />
+      <Method Name="AdjustZeroSignal" Hidden="true" />
+      <Property Name="ApplicationMode" Hidden="true" />
+      <Method Name="BaseWTDevice" Hidden="true" />
+      <Method Name="CalculateAdjustment" Hidden="true" />
+      <Property Name="CalibrationWeight" Hidden="true" />
+      <Method Name="Connect" Hidden="true" />
+      <Property Name="Connection" Hidden="true" />
+      <Property Name="ConnectionType" Hidden="true" />
+      <Method Name="Disconnect" Hidden="true" />
+      <Property Name="FirmwareVersion" Hidden="true" />
+      <Property Name="GeneralScaleError" Hidden="true" />
+      <Property Name="Identification" Hidden="true" />
+      <Property Name="IsConnected" Hidden="true" />
+      <Property Name="ManualTareValue" Hidden="true" />
+      <Property Name="MaximumCapacity" Hidden="true" />
+      <Property Name="NominalSignal" Hidden="true" />
+      <Property Name="PrintableWeight" Hidden="true" />
+      <Property Name="ProcessDataInterval" Hidden="true" />
+      <Property Name="ProcessDataTimer" Hidden="true" />
+      <Method Name="ProcessDataUpdateTick" Hidden="true" />
+      <Method Name="RecordWeight" Hidden="true" />
+      <Method Name="Restart" Hidden="true" />
+      <Method Name="RestoreAllDefaultParameters" Hidden="true" />
+      <Method Name="SaveAllParameters" Hidden="true" />
+      <Property Name="ScaleRange" Hidden="true" />
+      <Property Name="SerialNumber" Hidden="true" />
+      <Method Name="SetGross" Hidden="true" />
+      <Method Name="Stop" Hidden="true" />
+      <Method Name="Tare" Hidden="true" />
+      <Method Name="TareManually" Hidden="true" />
+      <Property Name="TareMode" Hidden="true" />
+      <Property Name="Unit" Hidden="true" />
+      <Property Name="Weight" Hidden="true" />
+      <Property Name="WeightStable" Hidden="true" />
+      <Method Name="Zero" Hidden="true" />
+      <Property Name="ZeroSignal" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EBQAKACBCCCAACFAIAARAIqIAaGAAACAIBnIBASAEBA=</HashCode>
+      <FileName>Weighing\BaseWTDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hbm.Automation.Api.Weighing.WTX.WTXJet" Collapsed="true">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJwAKRCBiCDAICFEqAAxCYqoA6mQQkSSAB+qBaQAJBA=</HashCode>
+      <FileName>Weighing\WTX\WTXJet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.285" />
+  </Class>
+  <Class Name="Hbm.Automation.Api.Weighing.BaseWTXDevice" Collapsed="true">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Weighing\WTX\BaseWTXDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hbm.Automation.Api.Weighing.WTX.WTXModbus" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAKACBKCCAACBCoAARAIqIAaGQAACAAFmIBAQAABA=</HashCode>
+      <FileName>Weighing\WTX\WTXModbus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hbm.Automation.Api.Weighing.DSE.DSEJet" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJwAKRCBiCCAICBAKAARAYqoA6GAAESSAB+oBKQABBA=</HashCode>
+      <FileName>Weighing\DSE\DSEJet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.316" />
+  </Class>
+  <Interface Name="Hbm.Automation.Api.Data.IProcessData">
+    <Position X="11.25" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAABAGAgIAAgAIAgQAEIAASAAAACAAAAIAAUAAAA=</HashCode>
+      <FileName>Data\IProcessData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

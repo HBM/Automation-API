@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA97796C-5C31-400B-96E2-DCA098659D79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hbm.Automation.Api</RootNamespace>
+    <AssemblyName>Hbm.Automation.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Hbm.Automation.Api.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus, Version=3.0.62.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NModbus.3.0.62\lib\net45\NModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpJet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpJet.2.0.0\lib\net45\SharpJet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp, Version=1.0.1.0, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp-netstandard.1.0.1\lib\net45\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Hbm.Automation.Api\Data\DataScaleInfo.cs">
+      <Link>Data\DataScaleInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataDigitalFilter.cs">
+      <Link>Data\IDataDigitalFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataDigitalIO.cs">
+      <Link>Data\IDataDigitalIO.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataFiller.cs">
+      <Link>Data\IDataFiller.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataFillerExtended.cs">
+      <Link>Data\IDataFillerExtended.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataLimitSwitch.cs">
+      <Link>Data\IDataLimitSwitch.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IDataScale.cs">
+      <Link>Data\IDataScale.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\IProcessData.cs">
+      <Link>Data\IProcessData.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\JetDataDigitalIO.cs">
+      <Link>Data\JetDataDigitalIO.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\JetDataFiller.cs">
+      <Link>Data\JetDataFiller.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\JetDataFillerExtended.cs">
+      <Link>Data\JetDataFillerExtended.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\JetDataLimitSwitch.cs">
+      <Link>Data\JetDataLimitSwitch.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\JetProcessData.cs">
+      <Link>Data\JetProcessData.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\ModbusDataDigitalIO.cs">
+      <Link>Data\ModbusDataDigitalIO.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\ModbusDataFiller.cs">
+      <Link>Data\ModbusDataFiller.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\ModbusDataLimitSwitch.cs">
+      <Link>Data\ModbusDataLimitSwitch.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\ModbusDataProcess.cs">
+      <Link>Data\ModbusDataProcess.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\PrintableWeightType.cs">
+      <Link>Data\PrintableWeightType.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\ProcessDataReceivedEventArgs.cs">
+      <Link>Data\ProcessDataReceivedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\WeightMemory.cs">
+      <Link>Data\WeightMemory.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Data\WeightType.cs">
+      <Link>Data\WeightType.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Enums.cs">
+      <Link>Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\INetConnection.cs">
+      <Link>INetConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\LogEventArgs.cs">
+      <Link>LogEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Utils\MeasurementUtils.cs">
+      <Link>Utils\MeasurementUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\BaseWTDevice.cs">
+      <Link>Weighing\BaseWTDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\DSE\DSEJet.cs">
+      <Link>Weighing\DSE\DSEJet.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\DSE\Jet\DSEJetConnection.cs">
+      <Link>Weighing\DSE\Jet\DSEJetConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\BaseWTXDevice.cs">
+      <Link>Weighing\WTX\BaseWTXDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Jet\JetBusCommand.cs">
+      <Link>Weighing\WTX\Jet\JetBusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Jet\JetBusCommands.cs">
+      <Link>Weighing\WTX\Jet\JetBusCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Jet\JetBusConnection.cs">
+      <Link>Weighing\WTX\Jet\JetBusConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Jet\JetBusException.cs">
+      <Link>Weighing\WTX\Jet\JetBusException.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Modbus\ModbusCommand.cs">
+      <Link>Weighing\WTX\Modbus\ModbusCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Modbus\ModbusCommands.cs">
+      <Link>Weighing\WTX\Modbus\ModbusCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\Modbus\ModbusTCPConnection.cs">
+      <Link>Weighing\WTX\Modbus\ModbusTCPConnection.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\WTXJet.cs">
+      <Link>Weighing\WTX\WTXJet.cs</Link>
+    </Compile>
+    <Compile Include="..\Hbm.Automation.Api\Weighing\WTX\WTXModbus.cs">
+      <Link>Weighing\WTX\WTXModbus.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\GitInfo.2.1.2\build\GitInfo.targets" Condition="Exists('..\packages\GitInfo.2.1.2\build\GitInfo.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\GitInfo.2.1.2\build\GitInfo.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GitInfo.2.1.2\build\GitInfo.targets'))" />
+  </Target>
+</Project>

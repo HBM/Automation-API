@@ -1,0 +1,158 @@
+﻿<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Import the common properties to support NuGet restore -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <!-- A framework version is required for NuGet restore.  This can be any valid version -->
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and
+				 project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b03822bc-f54b-4a91-9032-b0df96ffb439}</ProjectGuid>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Portable Library 4.5</FrameworkVersion>
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>HbmAutomationApi-Doc</HtmlHelpName>
+    <Language>en-US</Language>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="Automation-API-Doc.csproj" />
+    </DocumentationSources>
+    <VisibleItems>InheritedMembers, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <IndentHtml>False</IndentHtml>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="True">An API for connecting HBM Automation devices (e.g. WTX or DSE) via ethernet</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api" isDocumented="True">An API for connecting HBM Automation devices (e.g. WTX or DSE) via ethernet</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Data" isDocumented="True">Interfaces and their implemetation with settings for special application (e.g. filler, limit switches or dogotal filters)</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing.DSE" isDocumented="True">Namespace with DSE relevant classes</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing.DSE.Jet" isDocumented="True">Jetbus connection for DSE devices</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Utils" isDocumented="True">Common utilities</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.WTX" isDocumented="True">Namespace with WTX relevant classes</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing.WTX.Jet" isDocumented="True">Jetbus connection for WTX devices</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing.WTX.Modbus" isDocumented="True">Modbus connection for WTX devices</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing" isDocumented="True">Namespace for weighing devices</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Hbm.Automation.Api.Weighing.WTX" isDocumented="True">Namespace with WTX relevant classes</NamespaceSummaryItem></NamespaceSummaries>
+    <HelpTitle>Hbm.Automation.Api documentation</HelpTitle>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <NamingMethod>Guid</NamingMethod>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <Preliminary>False</Preliminary>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <ComponentConfigurations>
+      <ComponentConfig id="Reflection Index Data (ESENT Cache)" enabled="True" xmlns="">
+        <component id="Reflection Index Data (ESENT Cache)">
+          <index name="reflection" value="/reflection/apis/api" key="@id" cache="15" localCacheSize="2500" frameworkCachePath="{@LocalDataFolder}Cache\ReflectionIndexCache" projectCachePath="">
+            <data base="{@FrameworkReflectionDataFolder}" recurse="true" files="*.xml" duplicateWarning="false" groupId="ReflectionIndexCache">
+		{@ReferenceLinkNamespaceFiles}
+	</data>
+            <data files="reflection.xml" groupId="Project_Ref_{@UniqueID}" />
+          </index>
+          <copy name="reflection" source="*" target="/document/reference" />
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="Hbm.Automation.Api" isExposed="True">
+        <Filter entryType="Interface" fullName="Hbm.Automation.Api.INetConnection" filterName="INetConnection" isExposed="False">
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.INetConnection.Connect" filterName="Connect" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.INetConnection.Disconnect" filterName="Disconnect" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.INetConnection.ConnectionType" filterName="ConnectionType" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.INetConnection.IpAddress" filterName="IpAddress" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.INetConnection.IsConnected" filterName="IsConnected" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.INetConnection.CommunicationLog" filterName="CommunicationLog" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.INetConnection.UpdateData" filterName="UpdateData" isExposed="True" />
+        </Filter>
+      </Filter>
+      <Filter entryType="Namespace" fullName="Hbm.Automation.Api.Weighing.DSE.Jet" isExposed="False">
+        <Filter entryType="Class" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection" filterName="DSEJetConnection" isExposed="False">
+          <Filter entryType="Constructor" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.#ctor" filterName=".ctor" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.Connect" filterName="Connect" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.Disconnect" filterName="Disconnect" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.ConnectionType" filterName="ConnectionType" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.IpAddress" filterName="IpAddress" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.DSE.Jet.DSEJetConnection.IsConnected" filterName="IsConnected" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighinh.DSE.Jet.DSEJetConnection.CommunicationLog" filterName="CommunicationLog" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighinh.DSE.Jet.DSEJetConnection.UpdateData" filterName="UpdateData" isExposed="True" />
+        </Filter>
+      </Filter>
+      <Filter entryType="Namespace" fullName="Hbm.Automation.Api.Weighing.WTX.Jet" isExposed="False">
+        <Filter entryType="Class" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection" filterName="JetBusConnection" isExposed="False">
+          <Filter entryType="Constructor" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.#ctor" filterName=".ctor" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.Connect" filterName="Connect" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.Disconnect" filterName="Disconnect" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.ConnectionType" filterName="ConnectionType" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.IpAddress" filterName="IpAddress" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.IsConnected" filterName="IsConnected" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.CommunicationLog" filterName="CommunicationLog" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusConnection.UpdateData" filterName="UpdateData" isExposed="True" />
+        </Filter>
+        <Filter entryType="Class" fullName="Hbm.Automation.Api.Weighing.WTX.Jet.JetBusException" filterName="JetBusException" isExposed="True" />
+      </Filter>
+      <Filter entryType="Namespace" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus" isExposed="False">
+        <Filter entryType="Class" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection" filterName="ModbusTCPConnection" isExposed="False">
+          <Filter entryType="Constructor" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.#ctor" filterName=".ctor" isExposed="True" />
+          <Filter entryType="Method" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.Connect" filterName="Connect" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.ConnectionType" filterName="ConnectionType" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.IpAddress" filterName="IpAddress" isExposed="True" />
+          <Filter entryType="Property" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.IsConnected" filterName="IsConnected" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.CommunicationLog" filterName="CommunicationLog" isExposed="True" />
+          <Filter entryType="Event" fullName="Hbm.Automation.Api.Weighing.WTX.Modbus.ModbusTCPConnection.UpdateData" filterName="UpdateData" isExposed="True" />
+        </Filter>
+      </Filter>
+    </ApiFilter>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <!-- Uncomment this to use the NuGet packages when SHFB is not installed locally, e.g. in the CI build pipeline.
+			Update the package versions to the latest releases.
+	<ItemGroup>
+		<PackageReference Include="EWSoftware.SHFB" Version="2019.9.15" />
+		<PackageReference Include="EWSoftware.SHFB.NETFramework" Version="4.8.0" />
+	</ItemGroup>
+	-->
+  <!-- Import the common build targets during NuGet restore because before the packages are being installed, $(SHFBROOT) is not set yet -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="'$(MSBuildRestoreSessionId)' != ''" />
+  <!-- Import the SHFB build targets during build -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" Condition="'$(MSBuildRestoreSessionId)' == ''" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
+			 evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

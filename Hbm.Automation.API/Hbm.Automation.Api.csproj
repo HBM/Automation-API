@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>Hbm.Automation.Api</RootNamespace>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyName>Hbm.Automation.Api</AssemblyName>
+    <PackageId>Hbm.Automation.Api</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\DataStandardJet.cs" />
+    <Compile Remove="Data\DataStandardModbus.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="GitInfo" Version="2.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="SharpJet" Version="2.0.0" />
+    <PackageReference Include="NModbus" Version="3.0.62" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="Hbm.Automation.API.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
