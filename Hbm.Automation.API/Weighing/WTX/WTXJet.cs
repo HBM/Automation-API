@@ -858,12 +858,14 @@ namespace Hbm.Automation.Api.Weighing.WTX
         ///<inheritdoc/>
         public override bool AdjustZeroSignal()
         {
-            Connection.WriteInteger(JetBusCommands.CIA461ScaleCommand, SCALE_COMMAND_CALIBRATE_ZERO); 
+            Connection.WriteInteger(JetBusCommands.CIA461ScaleCommand, SCALE_COMMAND_CALIBRATE_ZERO);
 
-            while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) != SCALE_COMMAND_STATUS_ONGOING)
+            int com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
+            while ((com != SCALE_COMMAND_STATUS_ONGOING) && (com != SCALE_COMMAND_STATUS_OK))
             {
-                Thread.Sleep(200);
-            }     
+                Thread.Sleep(10);
+                com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
+            }
             while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) == SCALE_COMMAND_STATUS_ONGOING)
             {
                 Thread.Sleep(200);
@@ -882,9 +884,11 @@ namespace Hbm.Automation.Api.Weighing.WTX
         {
             Connection.WriteInteger(JetBusCommands.CIA461ScaleCommand, SCALE_COMMAND_CALIBRATE_NOMINAL);
 
-            while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) != SCALE_COMMAND_STATUS_ONGOING)
+            int com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
+            while ((com != SCALE_COMMAND_STATUS_ONGOING) && (com != SCALE_COMMAND_STATUS_OK))
             {
-                Thread.Sleep(100);
+                Thread.Sleep(10);
+                com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
             }
 
             while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) == SCALE_COMMAND_STATUS_ONGOING)
@@ -906,13 +910,15 @@ namespace Hbm.Automation.Api.Weighing.WTX
             Connection.WriteInteger(JetBusCommands.CIA461CalibrationWeight, MeasurementUtils.DoubleToDigit(calibrationWeight, ProcessData.Decimals));
 
             Connection.WriteInteger(JetBusCommands.CIA461ScaleCommand, SCALE_COMMAND_CALIBRATE_NOMINAL);
-           
-            
-            while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) != SCALE_COMMAND_STATUS_ONGOING)
+
+
+            int com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
+            while ((com != SCALE_COMMAND_STATUS_ONGOING) && (com != SCALE_COMMAND_STATUS_OK))
             {
-                Thread.Sleep(100);
+                Thread.Sleep(10);
+                com = Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus));
             }
-            
+
             while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) == SCALE_COMMAND_STATUS_ONGOING)
             {
                 Thread.Sleep(100);

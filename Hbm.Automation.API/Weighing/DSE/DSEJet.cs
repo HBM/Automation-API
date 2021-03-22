@@ -53,8 +53,8 @@ namespace Hbm.Automation.Api.Weighing.DSE
         private const int SCALE_COMMAND_CLEAR_PEAK_VALUES = 1801545072;
         private const int SCALE_COMMAND_ZERO = 1869768058;
         private const int SCALE_COMMAND_SET_GROSS = 1936683623;
-        private const int SCALE_COMMAND_STATUS_ONGOING = 1634168417;
-        private const int SCALE_COMMAND_STATUS_OK = 1801543519;
+        private const int SCALE_COMMAND_STATUS_ONGOING = 1869049455;
+        private const int SCALE_COMMAND_STATUS_OK = 1802461023;
         private const int SCALE_COMMAND_STATUS_ERROR_E1 = 826629983;
         private const int SCALE_COMMAND_STATUS_ERROR_E2 = 843407199;
         private const int SCALE_COMMAND_STATUS_ERROR_E3 = 860184415;
@@ -828,25 +828,26 @@ namespace Hbm.Automation.Api.Weighing.DSE
         {
             Connection.WriteInteger(JetBusCommands.STORecordWeight, SCALE_COMMAND_TARE);
         }
-                
+
         ///<inheritdoc/>
         public override void CalculateAdjustment(double scaleZeroLoad_mVV, double scaleCapacity_mVV)
         {
             int scalZeroLoad_d;
-            int scaleCapacity_d; 
+            int scaleCapacity_d;
 
             scalZeroLoad_d = (int)(scaleZeroLoad_mVV * CONVERISION_FACTOR_MVV_TO_D);
             scaleCapacity_d = (int)(scalZeroLoad_d + (scaleCapacity_mVV * CONVERISION_FACTOR_MVV_TO_D));
-                        
-            Connection.WriteInteger(JetBusCommands.LDWZeroValue, scalZeroLoad_d); 
-            Connection.WriteInteger(JetBusCommands.LWTNominalValue, Convert.ToInt32(scaleCapacity_d)); 
+
+            this.ZeroSignal = Convert.ToInt32(scalZeroLoad_d);
+            this.NominalSignal = Convert.ToInt32(scaleCapacity_d);
+
         }
 
         ///<inheritdoc/>
         public override bool AdjustZeroSignal()
         {
             Connection.WriteInteger(JetBusCommands.CIA461ScaleCommand, SCALE_COMMAND_CALIBRATE_ZERO); 
-            
+
             while (Convert.ToInt32(Connection.ReadFromBuffer(JetBusCommands.CIA461ScaleCommandStatus)) != SCALE_COMMAND_STATUS_ONGOING)
             {
                 Thread.Sleep(200);
@@ -921,6 +922,8 @@ namespace Hbm.Automation.Api.Weighing.DSE
                 ProcessDataReceived?.Invoke(this, new ProcessDataReceivedEventArgs(ProcessData));
             }
         }
+
+    
 
         public FilterTypes FilterType(int i)
         {

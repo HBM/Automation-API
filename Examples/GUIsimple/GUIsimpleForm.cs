@@ -298,23 +298,6 @@ namespace Hbm.Automation.Api.Weighing.Examples.GUIsimple
             string display = "";
             switch (comboBox1.SelectedItem)
             {
-                /**
-                 *  Serial number
-                    Device identification
-                    Firmware version
-                    Weight step
-                    Scale range
-                    Tare mode
-                    Weight stable
-                    Manual tare value
-                    Maximum capacity
-                    Calibration weight
-                    Zero signal
-                    Nominal signal
-                    Connection
-                    Connection type
-                    Application mode
-                 * **/
 
                 case "Serial number":
                     display = _wtxDevice.SerialNumber;
@@ -326,7 +309,8 @@ namespace Hbm.Automation.Api.Weighing.Examples.GUIsimple
                     display = _wtxDevice.FirmwareVersion;
                     break;
                 case "Weight step (DSE)":
-                    display = ((DSEJet)_wtxDevice).WeightStep.ToString() + " " + _wtxDevice.Unit;
+                    if (_wtxDevice.GetType() == typeof(DSEJet)) display = ((DSEJet)_wtxDevice).WeightStep.ToString() + " " + _wtxDevice.Unit;
+                    else display = "Device is not instance of DSE!";
                     break;
                 case "Scale range":
                     display = _wtxDevice.ScaleRange.ToString();
