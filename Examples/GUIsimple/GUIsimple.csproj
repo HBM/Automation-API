@@ -109,9 +109,9 @@
   <ItemGroup>
     <Content Include="Resources\jet_symbol.png" />
     <Content Include="Resources\modbus_symbol.png" />
+    <Content Include="Resources\NE107_DiagnosisActive.png" />
     <None Include="Resources\NE107_OutOfSpecification.png" />
     <None Include="Resources\NE107_DiagnosisPassive.png" />
-    <None Include="Resources\NE107_DiagnosisActive.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -121,9 +121,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Hbm.Automation.Api\Hbm.Automation.Api.csproj">
+    <ProjectReference Include="..\..\Hbm.Automation.Api\Hbm.Automation.Api.NETStandard.csproj">
       <Project>{f8fb1d85-0fba-4905-a559-a1c654675662}</Project>
-      <Name>Hbm.Automation.Api</Name>
+      <Name>Hbm.Automation.Api.NETStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

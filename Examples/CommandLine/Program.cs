@@ -39,6 +39,7 @@ namespace WTXModbus
     using Hbm.Automation.Api.Weighing.WTX.Jet;
     using Hbm.Automation.Api.Weighing.WTX.Modbus;
     using Hbm.Automation.Api.Weighing;
+    using Hbm.Automation.Api.SharpJet;
 
     /// <summary>
     /// This class implements a console application. An Object of the class 'ModbusTcpConnection' or 'JetBusConnection' and 'BaseWTDevice'('WTXJet' or WTXModbus') or 'ExtendedBaseWtDevice'-

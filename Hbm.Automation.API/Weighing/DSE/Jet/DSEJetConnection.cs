@@ -38,7 +38,7 @@ namespace Hbm.Automation.Api.Weighing.DSE.Jet
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    using Hbm.Devices.Jet;
+    using Hbm.Automation.Api.SharpJet;
     using Hbm.Automation.Api.Weighing.WTX.Jet;
     using Newtonsoft.Json.Linq;
 

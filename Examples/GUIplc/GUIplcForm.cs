@@ -40,6 +40,8 @@ namespace Hbm.Automation.Api.Weighing.Examples.GUIplc
     using System;
     using System.IO;
     using System.Windows.Forms;
+    using Hbm.Automation.Api.SharpJet;
+
     /// <summary>
     /// First, objects of class 'ModbusTcpConnection' and 'WTXModbus'(implements BaseWtDevice) are created to establish a connection and data transfer to the device. 
     /// Class 'ModbusTcpConnection' has the purpose to establish a connection, to read from the device (its register)

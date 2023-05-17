@@ -77,9 +77,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Hbm.Automation.Api\Hbm.Automation.Api.csproj">
+    <ProjectReference Include="..\..\Hbm.Automation.Api\Hbm.Automation.Api.NETStandard.csproj">
       <Project>{f8fb1d85-0fba-4905-a559-a1c654675662}</Project>
-      <Name>Hbm.Automation.Api</Name>
+      <Name>Hbm.Automation.Api.NETStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

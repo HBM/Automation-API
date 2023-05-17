@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Hbm.Ie.Api")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("HBM Automation-API, a simple API for connecting industrial electronics from HBM via ethernet. (E.g. weighing devices WTX110, WTX120 and DSE)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Hottinger Baldwin Messtechnik")]
 [assembly: AssemblyProduct("Hbm.Automation.Api")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,8 +32,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.9.6")]
+[assembly: AssemblyVersion("0.9.7")]
 [assembly: AssemblyFileVersion("0.9.6")]
 [assembly: AssemblyInformationalVersion(
-    "0.9.6.38+cb89539")]
+    "0.9.7")]
 //e.g.: 1.0.2-master+c218617

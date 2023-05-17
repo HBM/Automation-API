@@ -30,7 +30,7 @@
 
 namespace Hbm.Automation.Api.Test.WTXJetBusTest
 {
-    using Hbm.Devices.Jet;
+    using Hbm.Automation.Api.SharpJet;
     using Newtonsoft.Json.Linq;
     using System;
 
